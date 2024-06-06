@@ -17,6 +17,8 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityJDBC {
+
+
     @Autowired
     private CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
     @Autowired
