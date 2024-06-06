@@ -1,0 +1,289 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url('/images/milkeyway-universe.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.btn-logout, .btn-nav {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.header-right .btn-logout {
+    margin-left: 0;
+}
+
+.btn-logout:hover, .btn-nav:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.landing-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.typing-animation {
+    font-size: 50px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid;
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fff; }
+}
+
+.divider {
+    height: 5px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.1));
+    margin: 50px 0;
+}
+
+.about-section, .portfolio-section, .blog-section {
+    padding: 100px 50px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-info h2 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.profile-info p {
+    font-size: 16px;
+    max-width: 600px;
+}
+
+.social-media-buttons {
+    margin-top: 20px;
+}
+
+.social-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #3b5998; /* Default color: Facebook blue */
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn.facebook { background-color: #3b5998; }
+.social-btn.instagram { background-color: #e4405f; }
+.social-btn.youtube { background-color: #ff0000; }
+.social-btn.linkedin { background-color: #0077b5; }
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+.portfolio-section h2, .blog-section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.portfolio-item, .blog-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-item {
+    text-align: left;
+}
+
+.project-logo {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.project-info p {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.blog-carousel {
+    display: flex;
+    overflow-x: hidden; /* Hide overflow to prevent images from stacking */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+}
+
+.blog-items {
+    display: flex;
+    flex-direction: row; /* Ensure images are displayed horizontally */
+}
+
+.blog-item {
+    position: relative;
+    scroll-snap-align: start;
+    overflow: hidden;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 300px; /* Fixed width for each blog item */
+    flex: 0 0 auto; /* Prevent items from growing */
+    margin-bottom: 20px; /* Space between items */
+}
+
+.blog-images {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-images img {
+    width: 100%; /* Ensure images fill their containers */
+    height: auto;
+    object-fit: cover;
+}
+
+.blog-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: opacity 0.3s; /* Fade effect on hover */
+    opacity: 0; /* Initially hidden */
+}
+
+.blog-info h3 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.blog-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.blog-item:hover .blog-info {
+    opacity: 1; /* Show info on hover */
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+/* Hide scrollbar for modern browsers */
+.blog-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .blog-item {
+        width: calc(50% - 20px); /* Two items per row with margin */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .blog-item {
+        width: 100%; /* Full width for each item on smaller screens */
+    }
+}

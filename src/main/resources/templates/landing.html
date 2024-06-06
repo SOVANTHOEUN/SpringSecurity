@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Landing Page</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <a href="#home" class="btn-nav">Home</a>
+        <a href="#about" class="btn-nav">About</a>
+        <a href="#portfolio" class="btn-nav">Experience</a>
+        <a href="#blog" class="btn-nav">Blog</a>
+    </div>
+    <div class="header-right">
+        <a th:href="@{/logout}" class="btn-logout">Logout</a>
+    </div>
+</header>
+
+<section id="home" class="landing-container">
+    <div class="welcome-text">
+        <h1 class="typing-animation">Welcome Universe</h1>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="about" class="about-section">
+    <div class="profile-container">
+        <img src="/images/sovanthoeun-profile.jpeg" alt="Profile Picture" class="profile-pic">
+        <div class="profile-info">
+            <h2>About Me</h2>
+            <p>Hi, I'm [Your Name], a passionate developer with experience in various technologies. I enjoy creating innovative solutions and learning new skills.</p>
+            <div class="social-media-buttons">
+                <a href="https://www.facebook.com/vong.sovanbunthoeun" target="_blank" class="social-btn circle-btn facebook">
+                    <img src="/images/media/facebook.png" width="40px" height="40px" alt="Facebook icon" class="">
+                </a>
+                <a href="https://www.instagram.com/voung_bunthoeun/" target="_blank" class="social-btn circle-btn instagram">
+                    <img src="/images/media/instagram.png" width="40px" height="40px" alt="Facebook icon" class="">
+                </a>
+                <a href="https://www.youtube.com/@freetiime5444" target="_blank" class="social-btn circle-btn youtube">
+                    <img src="/images/media/youtube.png" width="40px" height="40px" alt="Facebook icon" class="">
+                </a>
+                <a href="https://www.linkedin.com/in/sovanthoeun/" target="_blank" class="social-btn circle-btn linkedin">
+                    <img src="/images/media/linkedin.png" width="40px" height="40px" alt="Facebook icon" class="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="portfolio" class="portfolio-section">
+    <h2>Experience</h2>
+    <div class="portfolio-item">
+        <img src="/images/fintech-1.png" alt="Project 1 Logo" class="project-logo">
+        <div class="project-info">
+            <h3>Project Name 1</h3>
+            <p>Brief introduction to the project. Description of the technologies used and the goals achieved.</p>
+            <p><strong>Period:</strong> January 2020 - December 2020</p>
+        </div>
+    </div>
+    <div class="portfolio-item">
+        <img src="/images/fintech-2.png" alt="Project 2 Logo" class="project-logo">
+        <div class="project-info">
+            <h3>Project Name 2</h3>
+            <p>Brief introduction to the project. Description of the technologies used and the goals achieved.</p>
+            <p><strong>Period:</strong> January 2021 - December 2021</p>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="blog" class="blog-section">
+    <h2>Blog</h2>
+    <div class="blog-container">
+        <div class="blog-carousel">
+            <div class="blog-items">
+                <div class="blog-item">
+                    <button class="slide-btn left-btn" onclick="slide(this.parentElement, -1)">&#10094;</button>
+                    <div class="blog-images">
+                        <img src="/images/cycling-hangang.jpeg" alt="Activity 1 Image 1">
+                        <img src="/images/activity1_image2.jpg" alt="Activity 1 Image 2">
+                        <!-- Add more images for Activity 1 as needed -->
+                    </div>
+                    <button class="slide-btn right-btn" onclick="slide(this.parentElement, 1)">&#10095;</button>
+                    <div class="blog-info">
+                        <h3>Activity 1</h3>
+                        <p>Details about Activity 1 and its significance.</p>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <button class="slide-btn left-btn" onclick="slide(this.parentElement, -1)">&#10094;</button>
+                    <div class="blog-images">
+                        <img src="/images/hanuel-garden.jpeg" alt="Activity 2 Image 1">
+                        <img src="/images/activity2_image2.jpg" alt="Activity 2 Image 2">
+                        <img src="/images/activity2_image3.jpg" alt="Activity 2 Image 3">
+                        <!-- Add more images for Activity 2 as needed -->
+                    </div>
+                    <button class="slide-btn right-btn" onclick="slide(this.parentElement, 1)">&#10095;</button>
+                    <div class="blog-info">
+                        <h3>Activity 2</h3>
+                        <p>Details about Activity 2 and its significance.</p>
+                    </div>
+                </div>
+                <!-- Add more blog items as needed -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>
