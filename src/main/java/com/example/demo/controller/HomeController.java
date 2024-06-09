@@ -6,6 +6,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
 //@RestController
 @Controller
 public class HomeController {
@@ -38,11 +41,6 @@ public class HomeController {
     @GetMapping("/logout")
     public void logout(HttpServletRequest request) throws ServletException {
         request.logout();
-    }
-
-    public static void main(String[] args) {
-        // generate jwt token here
-
     }
 
 }
